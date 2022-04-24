@@ -13,6 +13,22 @@
 		2897C5752808851100238440 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897C5742808851100238440 /* Car.swift */; };
 		2897C57A2808859A00238440 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897C5782808859A00238440 /* HomeViewController.swift */; };
 		2897C57B2808859A00238440 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2897C5792808859A00238440 /* HomeViewController.xib */; };
+		5511C2A9280CCB80006783CE /* TitleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511C2A7280CCB7F006783CE /* TitleListTableViewCell.swift */; };
+		5511C2AA280CCB80006783CE /* TitleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */; };
+		5511C2AC280CD055006783CE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511C2AB280CD055006783CE /* UIView.swift */; };
+		5511C2AE280CD0D0006783CE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511C2AD280CD0D0006783CE /* UIImage.swift */; };
+		551FAA66280C0B2500355C59 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FAA64280C0B2500355C59 /* BannerTableViewCell.swift */; };
+		551FAA67280C0B2500355C59 /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551FAA65280C0B2500355C59 /* BannerTableViewCell.xib */; };
+		551FAA6A280C193200355C59 /* CarListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FAA68280C193200355C59 /* CarListsTableViewCell.swift */; };
+		551FAA6B280C193200355C59 /* CarListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551FAA69280C193200355C59 /* CarListsTableViewCell.xib */; };
+		553306E0280C88BB0045FB8E /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553306DE280C88BA0045FB8E /* MenuCollectionViewCell.swift */; };
+		553306E1280C88BB0045FB8E /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553306DF280C88BA0045FB8E /* MenuCollectionViewCell.xib */; };
+		553306E4280C89D10045FB8E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553306E2280C89D10045FB8E /* MenuTableViewCell.swift */; };
+		553306E5280C89D10045FB8E /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553306E3280C89D10045FB8E /* MenuTableViewCell.xib */; };
+		55919E71280A8A4A009CAAD0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55919E6F280A8A48009CAAD0 /* DetailViewController.swift */; };
+		55919E72280A8A4A009CAAD0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55919E70280A8A4A009CAAD0 /* DetailViewController.xib */; };
+		55952171280D1AAA007BA2D2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55952170280D1AAA007BA2D2 /* UILabel.swift */; };
+		55E042992815512B00A34A07 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E042982815512B00A34A07 /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,22 @@
 		2897C5742808851100238440 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		2897C5782808859A00238440 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2897C5792808859A00238440 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5511C2A7280CCB7F006783CE /* TitleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleListTableViewCell.swift; path = BinarCarRental/Detail/ViewController/TitleListTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TitleListTableViewCell.xib; path = BinarCarRental/Detail/ViewController/TitleListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		5511C2AB280CD055006783CE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = BinarCarRental/Detail/ViewController/UIView.swift; sourceTree = SOURCE_ROOT; };
+		5511C2AD280CD0D0006783CE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = BinarCarRental/Detail/ViewController/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		551FAA64280C0B2500355C59 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BannerTableViewCell.swift; path = BinarCarRental/Detail/ViewController/BannerTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		551FAA65280C0B2500355C59 /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BannerTableViewCell.xib; path = BinarCarRental/Detail/ViewController/BannerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		551FAA68280C193200355C59 /* CarListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarListsTableViewCell.swift; path = BinarCarRental/Detail/ViewController/CarListsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		551FAA69280C193200355C59 /* CarListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CarListsTableViewCell.xib; path = BinarCarRental/Detail/ViewController/CarListsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		553306DE280C88BA0045FB8E /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuCollectionViewCell.swift; path = BinarCarRental/Detail/ViewController/MenuCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		553306DF280C88BA0045FB8E /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuCollectionViewCell.xib; path = BinarCarRental/Detail/ViewController/MenuCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		553306E2280C89D10045FB8E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = BinarCarRental/Detail/ViewController/MenuTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		553306E3280C89D10045FB8E /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuTableViewCell.xib; path = BinarCarRental/Detail/ViewController/MenuTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		55919E6F280A8A48009CAAD0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		55919E70280A8A4A009CAAD0 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		55952170280D1AAA007BA2D2 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = BinarCarRental/Detail/ViewController/UILabel.swift; sourceTree = SOURCE_ROOT; };
+		55E042982815512B00A34A07 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Int.swift; path = BinarCarRental/Detail/ViewController/Int.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,10 @@
 		2897C571280884C100238440 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5511C2AB280CD055006783CE /* UIView.swift */,
+				5511C2AD280CD0D0006783CE /* UIImage.swift */,
+				55952170280D1AAA007BA2D2 /* UILabel.swift */,
+				55E042982815512B00A34A07 /* Int.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -87,6 +123,7 @@
 		2897C573280884DC00238440 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				55919E6E280A8A15009CAAD0 /* ViewController */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -94,6 +131,16 @@
 		2897C5762808855B00238440 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				551FAA64280C0B2500355C59 /* BannerTableViewCell.swift */,
+				551FAA65280C0B2500355C59 /* BannerTableViewCell.xib */,
+				551FAA68280C193200355C59 /* CarListsTableViewCell.swift */,
+				551FAA69280C193200355C59 /* CarListsTableViewCell.xib */,
+				553306DE280C88BA0045FB8E /* MenuCollectionViewCell.swift */,
+				553306DF280C88BA0045FB8E /* MenuCollectionViewCell.xib */,
+				553306E2280C89D10045FB8E /* MenuTableViewCell.swift */,
+				553306E3280C89D10045FB8E /* MenuTableViewCell.xib */,
+				5511C2A7280CCB7F006783CE /* TitleListTableViewCell.swift */,
+				5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -103,6 +150,15 @@
 			children = (
 				2897C5782808859A00238440 /* HomeViewController.swift */,
 				2897C5792808859A00238440 /* HomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55919E6E280A8A15009CAAD0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55919E6F280A8A48009CAAD0 /* DetailViewController.swift */,
+				55919E70280A8A4A009CAAD0 /* DetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -165,9 +221,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553306E1280C88BB0045FB8E /* MenuCollectionViewCell.xib in Resources */,
+				551FAA6B280C193200355C59 /* CarListsTableViewCell.xib in Resources */,
+				551FAA67280C0B2500355C59 /* BannerTableViewCell.xib in Resources */,
+				5511C2AA280CCB80006783CE /* TitleListTableViewCell.xib in Resources */,
 				2897C56A2808849100238440 /* LaunchScreen.storyboard in Resources */,
 				2897C5672808849100238440 /* Assets.xcassets in Resources */,
 				2897C57B2808859A00238440 /* HomeViewController.xib in Resources */,
+				553306E5280C89D10045FB8E /* MenuTableViewCell.xib in Resources */,
+				55919E72280A8A4A009CAAD0 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +240,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5511C2AC280CD055006783CE /* UIView.swift in Sources */,
+				55E042992815512B00A34A07 /* Int.swift in Sources */,
+				5511C2AE280CD0D0006783CE /* UIImage.swift in Sources */,
+				551FAA66280C0B2500355C59 /* BannerTableViewCell.swift in Sources */,
+				553306E0280C88BB0045FB8E /* MenuCollectionViewCell.swift in Sources */,
+				553306E4280C89D10045FB8E /* MenuTableViewCell.swift in Sources */,
 				2897C5752808851100238440 /* Car.swift in Sources */,
 				2897C55E2808848E00238440 /* AppDelegate.swift in Sources */,
 				2897C57A2808859A00238440 /* HomeViewController.swift in Sources */,
+				551FAA6A280C193200355C59 /* CarListsTableViewCell.swift in Sources */,
+				55919E71280A8A4A009CAAD0 /* DetailViewController.swift in Sources */,
+				55952171280D1AAA007BA2D2 /* UILabel.swift in Sources */,
+				5511C2A9280CCB80006783CE /* TitleListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
