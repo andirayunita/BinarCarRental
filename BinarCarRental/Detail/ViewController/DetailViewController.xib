@@ -81,10 +81,10 @@ Tidak termasuk akomodasi penginapan.</string>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvq-NI-Q8m">
                                                     <rect key="frame" x="24" y="65" width="334" height="80.5"/>
-                                                    <string key="text">Apa saja yang termasuk dalam paket misal durasi max 12 jam
-Sudah termasuk bensin selama 12 jam
-Sudah termasuk Tiket Wisata
-Sudah termasuk pajak</string>
+                                                    <string key="text">Apa saja yang termasuk dalam paket misal durasi max 12 jam.
+Sudah termasuk bensin selama 12 jam.
+Sudah termasuk Tiket Wisata.
+Sudah termasuk pajak.</string>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@ Sudah termasuk pajak</string>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="favoriteTapped:" destination="-1" eventType="touchUpInside" id="NXm-k3-qpo"/>
+                                <action selector="editTapped:" destination="-1" eventType="touchUpInside" id="YDd-XB-Xe1"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVy-K4-vm0">
@@ -184,6 +184,9 @@ Sudah termasuk pajak</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Hapus"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="-1" eventType="touchUpInside" id="gUa-7S-0jh"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

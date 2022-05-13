@@ -29,16 +29,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xP0-ZT-b2l">
-                                <rect key="frame" x="72" y="16" width="200" height="43"/>
+                                <rect key="frame" x="72" y="16" width="75" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Mobil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKA-TG-GMX">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7R-yX-dsd">
-                                        <rect key="frame" x="0.0" y="26.5" width="200" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="75" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <color key="textColor" red="0.36078431372549019" green="0.72156862745098038" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -48,13 +48,6 @@
                                     <constraint firstItem="L7R-yX-dsd" firstAttribute="top" secondItem="oKA-TG-GMX" secondAttribute="bottom" constant="10" id="RgL-9t-wM7"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_star" translatesAutoresizingMaskIntoConstraints="NO" id="O1q-b9-MLk">
-                                <rect key="frame" x="288" y="27" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="sCX-Aa-xbS"/>
-                                    <constraint firstAttribute="width" constant="24" id="yJE-SG-wpY"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -62,13 +55,9 @@
                             <constraint firstItem="8ah-Bp-go4" firstAttribute="top" secondItem="ZPx-5b-qax" secondAttribute="top" constant="16" id="3xf-3e-e6l"/>
                             <constraint firstItem="8ah-Bp-go4" firstAttribute="leading" secondItem="ZPx-5b-qax" secondAttribute="leading" constant="16" id="4At-eI-eKh"/>
                             <constraint firstItem="xP0-ZT-b2l" firstAttribute="leading" secondItem="8ah-Bp-go4" secondAttribute="trailing" constant="16" id="QNA-Ur-gXV"/>
-                            <constraint firstItem="O1q-b9-MLk" firstAttribute="top" secondItem="ZPx-5b-qax" secondAttribute="top" constant="27" id="ShB-GK-vnS"/>
-                            <constraint firstItem="O1q-b9-MLk" firstAttribute="leading" secondItem="xP0-ZT-b2l" secondAttribute="trailing" constant="16" id="ZTk-rN-TdL"/>
-                            <constraint firstAttribute="trailing" secondItem="O1q-b9-MLk" secondAttribute="trailing" constant="16" id="a3j-sk-3tR"/>
                             <constraint firstAttribute="width" constant="328" id="dkJ-9T-hGv"/>
                             <constraint firstAttribute="bottom" secondItem="8ah-Bp-go4" secondAttribute="bottom" constant="16" id="hg7-ED-eSh"/>
                             <constraint firstItem="xP0-ZT-b2l" firstAttribute="top" secondItem="ZPx-5b-qax" secondAttribute="top" constant="16" id="lhJ-RT-WJr"/>
-                            <constraint firstAttribute="bottom" secondItem="O1q-b9-MLk" secondAttribute="bottom" constant="27" id="niw-48-T3X"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -89,13 +78,11 @@
                 <outlet property="carList" destination="ZPx-5b-qax" id="vBS-3z-czw"/>
                 <outlet property="carNameLabel" destination="oKA-TG-GMX" id="soO-z4-AEu"/>
                 <outlet property="priceLabel" destination="L7R-yX-dsd" id="Rer-NI-5xS"/>
-                <outlet property="starIcon" destination="O1q-b9-MLk" id="aUe-fB-8Op"/>
             </connections>
             <point key="canvasLocation" x="166.66666666666669" y="125.22321428571428"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_star" width="170.5" height="170.5"/>
         <image name="img_car" width="236" height="142"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

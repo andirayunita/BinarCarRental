@@ -8,20 +8,23 @@
 import UIKit
 
 protocol DetailViewControllerDelegate {
+  func updateFavorite(_ dataCar: CarData)
+  func deleteDelegate(car: CarData, index: Int?)
+  func updateData(car: CarData)
 }
 
 class DetailViewController: UIViewController {
-  
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var aboutPackage: UIView!
   @IBOutlet weak var includePackageLabel: UILabel!
   @IBOutlet weak var excludePackageLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
 
-  var dataCar: CarData
-  var delegate: DetailViewControllerDelegate
+  var dataCar: (String, Int, Int)
+  var delegate: DetailViewControllerDelegate?
+  var index: Int?
 
-  init(dataCar: CarData, delegate: DetailViewControllerDelegate) {
+  init(dataCar: (String, Int, Int), delegate: DetailViewControllerDelegate) {
     self.dataCar = dataCar
     self.delegate = delegate
     super.init(nibName: "DetailViewController", bundle: nil)
@@ -56,10 +59,41 @@ class DetailViewController: UIViewController {
   }
 
   func loadCarData() {
-    nameLabel.text = dataCar.name
-    priceLabel.text = dataCar.price.currencyFormat()
+    nameLabel.text = dataCar.0
+    priceLabel.text = dataCar.1.currencyFormat()
   }
 
-  @IBAction func favoriteTapped(_ sender: UIButton) {
+  @IBAction func editTapped(_ sender: UIButton) {
+    let vc = EditViewController()
+    vc.id = dataCar.2
+    vc.delegate = self
+    self.present(vc, animated: true, completion: nil)
+  }
+
+  @IBAction func deleteTapped(_ sender: UIButton) {
+    guard let url = URL(string: "https://rent-car-appx.herokuapp.com/admin/car/\(dataCar.2)") else {
+      print("Invalid URL")
+      return
+    }
+    var req = URLRequest(url: url)
+    req.httpMethod = "DELETE"
+    URLSession.shared.dataTask(with: req) { data, response, error in
+      do {
+        let result = try JSONDecoder().decode(CarData.self, from: data!)
+        DispatchQueue.main.async { self.delegate?.deleteDelegate(car: result, index: self.index) }
+      } catch {
+        print(error.localizedDescription)
+      }
+    }.resume()
+  print("\(dataCar.2)")
+  }
+}
+
+extension DetailViewController: EditViewControllerDelegate {
+  func editData(cars: CarData) {
+    self.priceLabel.text = "\(cars.price ?? 0)"
+    self.nameLabel.text = cars.name
+    self.delegate?.updateData(car: cars)
+    self.navigationController?.popToRootViewController(animated: true)
   }
 }

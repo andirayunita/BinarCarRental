@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol AddCarDelegate {
+  func tapAdd()
+}
+
 class BannerTableViewCell: UITableViewCell {
+  @IBOutlet weak var addButton: UIButton!
+
+  var delegate: AddCarDelegate!
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -18,5 +25,8 @@ class BannerTableViewCell: UITableViewCell {
   }
 
   class func nib() -> UINib { UINib(nibName: "BannerTableViewCell", bundle: nil) }
-  
+
+  @IBAction func addTapped(_ sender: UIButton) {
+    self.delegate.tapAdd()
+  }
 }

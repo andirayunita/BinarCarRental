@@ -12,13 +12,12 @@ class CarListsTableViewCell: UITableViewCell {
   @IBOutlet weak var carList: UIView!
   @IBOutlet weak var carNameLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
-  @IBOutlet weak var starIcon: UIImageView!
 
   var tapHandler: (() -> Void)?
-  var item: CarData? {
+  var item: (String, Int)? {
     didSet {
       if let item = item {
-        setupItem(carData: item)
+        setupItem(item)
       }
     }
   }
@@ -38,10 +37,9 @@ class CarListsTableViewCell: UITableViewCell {
     tapHandler?()
   }
 
-  func setupItem(carData: CarData) {
-    carNameLabel.text = carData.name
-    priceLabel.text = carData.price.currencyFormat()
-    starIcon.image = carData.isFavorite ? UIImage(named: "ic_star_fill") : UIImage(named: "ic_star")
+  func setupItem(_ item: (String, Int)) {
+    carNameLabel.text = item.0
+    priceLabel.text = String(item.1.currencyFormat())
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,5 +47,5 @@ class CarListsTableViewCell: UITableViewCell {
   }
 
   class func nib() -> UINib { UINib(nibName: "CarListsTableViewCell", bundle: nil) }
-    
+
 }
