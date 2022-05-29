@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="KGk-i7-Jjw" customClass="BannerTableViewCell" customModule="BinarCarRental" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-tF-az9">
+                        <rect key="frame" x="16" y="8" width="382" height="140"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_car_headline" translatesAutoresizingMaskIntoConstraints="NO" id="4pq-ZW-wLC">
+                                <rect key="frame" x="204" y="37" width="178" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="Br4-Xt-sVf"/>
+                                    <constraint firstAttribute="width" constant="178" id="ovV-RN-rI1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6C-2Y-vew">
+                                <rect key="frame" x="24" y="24" width="161" height="37"/>
+                                <string key="text">Tambahkan data mobil
+di kawasanmu</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5l3-y0-uTQ">
+                                <rect key="frame" x="24" y="88" width="109" height="28"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="09F-oh-tQH"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Tambah Mobil">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cAH-xQ-yjS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.10588235294117647" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4pq-ZW-wLC" secondAttribute="trailing" id="48n-0c-rqE"/>
+                            <constraint firstItem="A6C-2Y-vew" firstAttribute="leading" secondItem="hxc-tF-az9" secondAttribute="leading" constant="24" id="7hm-bR-GhQ"/>
+                            <constraint firstAttribute="height" constant="140" id="CAO-FE-Zee"/>
+                            <constraint firstAttribute="bottom" secondItem="5l3-y0-uTQ" secondAttribute="bottom" constant="24" id="I16-Uf-Jn9"/>
+                            <constraint firstAttribute="width" constant="382" id="WOv-6d-9Ob"/>
+                            <constraint firstItem="A6C-2Y-vew" firstAttribute="top" secondItem="hxc-tF-az9" secondAttribute="top" constant="24" id="bGk-1o-64o"/>
+                            <constraint firstItem="5l3-y0-uTQ" firstAttribute="leading" secondItem="hxc-tF-az9" secondAttribute="leading" constant="24" id="hqr-ky-gzJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4pq-ZW-wLC" secondAttribute="bottom" id="kNo-wG-4gn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="hxc-tF-az9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6fr-Di-63L"/>
+                    <constraint firstAttribute="trailing" secondItem="hxc-tF-az9" secondAttribute="trailing" constant="16" id="8Qf-HY-dtG"/>
+                    <constraint firstItem="hxc-tF-az9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cQP-j6-Bjd"/>
+                    <constraint firstAttribute="bottom" secondItem="hxc-tF-az9" secondAttribute="bottom" constant="8" id="tyu-2F-qNi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addButton" destination="5l3-y0-uTQ" id="ceZ-Be-h2O"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="112.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_car_headline" width="178" height="103"/>
+    </resources>
+</document>
