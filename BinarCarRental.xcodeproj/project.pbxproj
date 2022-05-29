@@ -17,6 +17,8 @@
 		5511C2AA280CCB80006783CE /* TitleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */; };
 		5511C2AC280CD055006783CE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511C2AB280CD055006783CE /* UIView.swift */; };
 		5511C2AE280CD0D0006783CE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511C2AD280CD0D0006783CE /* UIImage.swift */; };
+		5518F802282E59C1007B6054 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518F801282E59C1007B6054 /* HeaderView.swift */; };
+		5518F804282E59D6007B6054 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5518F803282E59D5007B6054 /* HeaderView.xib */; };
 		551FAA66280C0B2500355C59 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FAA64280C0B2500355C59 /* BannerTableViewCell.swift */; };
 		551FAA67280C0B2500355C59 /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551FAA65280C0B2500355C59 /* BannerTableViewCell.xib */; };
 		551FAA6A280C193200355C59 /* CarListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FAA68280C193200355C59 /* CarListsTableViewCell.swift */; };
@@ -49,6 +51,8 @@
 		5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TitleListTableViewCell.xib; path = BinarCarRental/Detail/ViewController/TitleListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		5511C2AB280CD055006783CE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = BinarCarRental/Detail/ViewController/UIView.swift; sourceTree = SOURCE_ROOT; };
 		5511C2AD280CD0D0006783CE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = BinarCarRental/Detail/ViewController/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		5518F801282E59C1007B6054 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BinarCarRental/Home/ViewController/HeaderView.swift; sourceTree = SOURCE_ROOT; };
+		5518F803282E59D5007B6054 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HeaderView.xib; path = BinarCarRental/Home/ViewController/HeaderView.xib; sourceTree = SOURCE_ROOT; };
 		551FAA64280C0B2500355C59 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BannerTableViewCell.swift; path = BinarCarRental/Detail/ViewController/BannerTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		551FAA65280C0B2500355C59 /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BannerTableViewCell.xib; path = BinarCarRental/Detail/ViewController/BannerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		551FAA68280C193200355C59 /* CarListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarListsTableViewCell.swift; path = BinarCarRental/Detail/ViewController/CarListsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -151,6 +155,8 @@
 				553306E3280C89D10045FB8E /* MenuTableViewCell.xib */,
 				5511C2A7280CCB7F006783CE /* TitleListTableViewCell.swift */,
 				5511C2A8280CCB7F006783CE /* TitleListTableViewCell.xib */,
+				5518F801282E59C1007B6054 /* HeaderView.swift */,
+				5518F803282E59D5007B6054 /* HeaderView.xib */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				553306E1280C88BB0045FB8E /* MenuCollectionViewCell.xib in Resources */,
 				551FAA6B280C193200355C59 /* CarListsTableViewCell.xib in Resources */,
 				55E0429D2815B12800A34A07 /* AddViewController.xib in Resources */,
+				5518F804282E59D6007B6054 /* HeaderView.xib in Resources */,
 				551FAA67280C0B2500355C59 /* BannerTableViewCell.xib in Resources */,
 				5511C2AA280CCB80006783CE /* TitleListTableViewCell.xib in Resources */,
 				2897C56A2808849100238440 /* LaunchScreen.storyboard in Resources */,
@@ -271,6 +278,7 @@
 				5511C2AE280CD0D0006783CE /* UIImage.swift in Sources */,
 				551FAA66280C0B2500355C59 /* BannerTableViewCell.swift in Sources */,
 				5593537E282430280068E79F /* CarListModel.swift in Sources */,
+				5518F802282E59C1007B6054 /* HeaderView.swift in Sources */,
 				553306E0280C88BB0045FB8E /* MenuCollectionViewCell.swift in Sources */,
 				553306E4280C89D10045FB8E /* MenuTableViewCell.swift in Sources */,
 				55FD7F2A28269F6B00317276 /* EditViewController.swift in Sources */,

@@ -11,20 +11,19 @@ class HomeViewController: UIViewController {
   
   @IBOutlet weak var homeTableView: UITableView!
 
-  var car = [CarData]()
-  var index: Int?
+  private enum SectionType {
+    case banner, menuTable, carLists
+  }
 
-//  private enum sectionType {
-//    case banner, menuTable, carLists
-//  }
-//
-//  private let sections: [sectionType] = [.banner, .menuTable, .carLists]
-//
-//  var carLists: [CarData]? {
-//    didSet {
-//      homeTableView.reloadData()
-//    }
-//  }
+  private let sections: [SectionType] = [.banner, .menuTable, .carLists]
+
+  var carsData: [CarData]? {
+    didSet {
+      homeTableView.reloadData()
+    }
+  }
+
+  var index: Int?
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -42,11 +41,6 @@ class HomeViewController: UIViewController {
     homeTableView.register(CarListsTableViewCell.nib(), forCellReuseIdentifier: "CarListsTableViewCell")
 
     getCarAPI()
-
-//    homeTableView.register(cellType: BannerTableViewCell.self)
-//    homeTableView.register(cellType: MenuTableViewCell.self)
-//    homeTableView.register(cellType: TitleListTableViewCell.self)
-//    homeTableView.register(cellType: CarListsTableViewCell.self)
   }
 
   func getCarAPI() {
@@ -59,7 +53,7 @@ class HomeViewController: UIViewController {
       do {
         let result = try JSONDecoder().decode([CarData].self, from: data!)
         DispatchQueue.main.async {
-          self.car = result
+          self.carsData = result
           self.homeTableView.reloadData()
         }
       } catch {
@@ -70,38 +64,64 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let sectionView = HeaderView(frame: CGRect(x: 0, y: 0, width: homeTableView.frame.size.width, height: 37))
+    switch sections[section] {
+    case .carLists:
+      sectionView.title = "Daftar Mobil Pilihan"
+    default:
+      sectionView.title = ""
+    }
+    return sectionView
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    switch sections[section] {
+    case .carLists:
+      return 37
+    default:
+      return 0.0001
+    }
+  }
+
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    0.0001
+  }
+
+  func numberOfSections(in tableView: UITableView) -> Int {
+    sections.count
+  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    car.count + 3
+    switch sections[section] {
+    case .carLists:
+      return carsData?.count ?? 0
+    default:
+      return 1
+    }
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    switch indexPath.row {
-    case 0:
+    switch sections[indexPath.section] {
+    case .banner:
       let cell: BannerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell", for: indexPath) as! BannerTableViewCell
       cell.delegate = self
       cell.selectionStyle = .none
       return cell
 
-    case 1:
+    case .menuTable:
       let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell
       cell.selectionStyle = .none
       return cell
 
-    case 2:
-      let cell: TitleListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TitleListTableViewCell", for: indexPath) as! TitleListTableViewCell
-      cell.selectionStyle = .none
-      return cell
-
-    default:
+    case .carLists:
       let cell: CarListsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarListsTableViewCell", for: indexPath) as! CarListsTableViewCell
       cell.selectionStyle = .none
-      let indexCar = car[indexPath.row - 3]
-      cell.item = (indexCar.name ?? "", indexCar.price ?? 0)
+      let indexCar = carsData?[indexPath.row]
+      cell.item = (indexCar?.name ?? "", indexCar?.price ?? 0)
       cell.tapHandler = {
-        let vc = DetailViewController(dataCar: (indexCar.name ?? "", indexCar.price ?? 0, indexCar.id!), delegate: self)
-        self.index = indexPath.row - 3
+        let vc = DetailViewController(dataCar: self.carsData![indexPath.row], delegate: self)
         vc.delegate = self
-        vc.index = self.index!
         self.navigationController?.pushViewController(vc, animated: true)
       }
       return cell
@@ -111,26 +131,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: AddCarDelegate, AddViewControllerDelegate, DetailViewControllerDelegate {
   func deleteDelegate(car: CarData, index: Int?) {
-    self.car.remove(at: index!)
+    self.carsData?.remove(at: index ?? 0)
     self.homeTableView.reloadData()
     self.navigationController?.popToRootViewController(animated: true)
   }
 
   func updateData(car: CarData) {
-    self.car[index!].name = car.name
-    self.car[index!].price = car.price
+    self.carsData?[index ?? 0].name = car.name
+    self.carsData?[index ?? 0].price = car.price
     self.homeTableView.reloadData()
   }
 
   func updateFavorite(_ dataCar: CarData) {
-    if let index = car.firstIndex(where: { $0.name == dataCar.name }) {
-      car[index] = dataCar
+    if let index = carsData?.firstIndex(where: { $0.name == dataCar.name }) {
+      carsData![index] = dataCar
     }
     homeTableView.reloadData()
   }
 
   func addData(cars: CarData) {
-    self.car.append(cars)
+    self.carsData?.append(cars)
     self.homeTableView.reloadData()
   }
 
@@ -140,32 +160,3 @@ extension HomeViewController: AddCarDelegate, AddViewControllerDelegate, DetailV
     self.present(vc, animated: true, completion: nil)
   }
 }
-
-
-//extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-//  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    switch sections[section] {
-//    case .carLists:
-//      return carLists?.count ?? 0
-//    case .banner, .menuTable:
-//      return 1
-//    }
-//  }
-//
-//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    switch sections[indexPath.section] {
-//    case .banner:
-//      let cell: BannerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-//      cell.banner =
-//      return cell
-//    case .menuTable:
-//      let cell: MenuTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-//      cell.menu =
-//      return cell
-//    case .carLists:
-//      let cell: CarListsTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-//      cell.carLists =
-//      return cell
-//    }
-//  }
-//}

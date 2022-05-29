@@ -20,11 +20,11 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var excludePackageLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
 
-  var dataCar: (String, Int, Int)
+  var dataCar: CarData
   var delegate: DetailViewControllerDelegate?
   var index: Int?
 
-  init(dataCar: (String, Int, Int), delegate: DetailViewControllerDelegate) {
+  init(dataCar: CarData, delegate: DetailViewControllerDelegate) {
     self.dataCar = dataCar
     self.delegate = delegate
     super.init(nibName: "DetailViewController", bundle: nil)
@@ -59,19 +59,19 @@ class DetailViewController: UIViewController {
   }
 
   func loadCarData() {
-    nameLabel.text = dataCar.0
-    priceLabel.text = dataCar.1.currencyFormat()
+    nameLabel.text = dataCar.name
+    priceLabel.text = dataCar.price?.currencyFormat()
   }
 
   @IBAction func editTapped(_ sender: UIButton) {
     let vc = EditViewController()
-    vc.id = dataCar.2
+    vc.id = dataCar.id
     vc.delegate = self
     self.present(vc, animated: true, completion: nil)
   }
 
   @IBAction func deleteTapped(_ sender: UIButton) {
-    guard let url = URL(string: "https://rent-car-appx.herokuapp.com/admin/car/\(dataCar.2)") else {
+    guard let url = URL(string: "https://rent-car-appx.herokuapp.com/admin/car/\(dataCar.id ?? 0)") else {
       print("Invalid URL")
       return
     }
@@ -85,7 +85,7 @@ class DetailViewController: UIViewController {
         print(error.localizedDescription)
       }
     }.resume()
-  print("\(dataCar.2)")
+    print("\(dataCar.id ?? 0)")
   }
 }
 
